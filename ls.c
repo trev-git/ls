@@ -127,6 +127,7 @@ void long_file_print(char *filename)
     printf("%5lu ", stats->st_size);
     file_date(stats->st_mtim.tv_sec);
     printf("%s", filename);
+    free(stats);
 }
 
 void file_type(mode_t mode)
